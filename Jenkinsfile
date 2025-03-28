@@ -45,7 +45,8 @@ pipeline {
     } 
         stage ('Configure Test-server with Terraform, Ansible and then Deploying'){
             steps {
-                dir('my-serverfiles'){
+                //dir('my-serverfiles')
+              {
                 sh 'sudo chmod 600 Prabhu.pem'
                 sh 'terraform init'
                 sh 'terraform validate'
