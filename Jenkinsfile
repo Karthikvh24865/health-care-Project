@@ -43,7 +43,7 @@ pipeline {
         sh 'sudo docker push prabhulk/healthcare:1.0'
             }
     } 
-        stage ('Configure Test-server with Terraform, Ansible and then Deploying'){
+        stage ('Configure Kubernetes-server with Terraform'){
             steps {
                 //dir('my-serverfiles'){
                 sh 'sudo chmod 600 Prabhu.pem'
