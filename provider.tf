@@ -1,4 +1,4 @@
-locals {
+/* locals {
   region = "us-east-1"
   name   = "${terraform.workspace}-cluster"
   vpc_cidr = "10.123.0.0/16"
@@ -13,4 +13,8 @@ locals {
 
 provider "aws" {
   region = "us-east-1"
+}
+*/
+provider "aws" {
+region     = "ap-south-1" 
 }
