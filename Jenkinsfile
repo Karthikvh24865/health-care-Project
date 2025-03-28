@@ -8,7 +8,7 @@ pipeline {
    stage('CheckOut') {
       steps {
         echo 'Checkout the source code from GitHub'
-        git branch: 'main', url: 'https://github.com/prabhulk25/health-care-Project.git'
+        git 'https://github.com/prabhulk25/health-care-Project.git'
             }
     }
     
