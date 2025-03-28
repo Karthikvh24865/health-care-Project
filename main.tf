@@ -1,6 +1,6 @@
 resource "aws_instance" "test-server" {
   ami           = "ami-00bb6a80f01f03502" 
-  instance_type = "t2.micro" 
+  instance_type = "t3.medium" 
   key_name = "Prabhu"
   vpc_security_group_ids= ["sg-0ce7a707b375e270d"]
   connection {
@@ -26,6 +26,6 @@ resource "aws_instance" "test-server" {
   }
 
    provisioner "local-exec" {
-  command = "ansible-playbook /var/lib/jenkins/workspace/Banking-finance-project/my-serverfiles/ansible-playbook.yml "
+  command = "ansible-playbook /var/lib/jenkins/workspace/health-care-project/ansible-playbook.yml "
   } 
 }
