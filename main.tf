@@ -26,6 +26,6 @@ resource "aws_instance" "Kubernetes-server" {
   }
 
    provisioner "local-exec" {
-  command = "ansible-playbook /var/lib/jenkins/workspace/health-care-project/ansible-playbook.yml "
+  command = "ansible-playbook /var/lib/jenkins/workspace/HealtcareProject/ansible-playbook.yml "
   } 
 }
