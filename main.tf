@@ -9,7 +9,7 @@ resource "aws_instance" "Kubernetes-server" {
     private_key = file("./Prabhu.pem")
     host     = self.public_ip
   }
-  provisioner "remote-exec" {
+ /* provisioner "remote-exec" {
     inline = [ "echo 'wait to start instance' "]
   }
   tags = {
@@ -18,6 +18,7 @@ resource "aws_instance" "Kubernetes-server" {
   lifecycle {
     prevent_destroy = true
   }
+*/
  // provisioner "local-exec" {
 //      command = " echo ${aws_instance.Kubernetes-server.public_ip} > /etc/ansible/hosts "
 //  }
