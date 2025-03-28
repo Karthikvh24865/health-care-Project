@@ -45,15 +45,14 @@ pipeline {
     } 
         stage ('Configure Test-server with Terraform, Ansible and then Deploying'){
             steps {
-                //dir('my-serverfiles')
-              {
+                //dir('my-serverfiles'){
                 sh 'sudo chmod 600 Prabhu.pem'
                 sh 'terraform init'
                 sh 'terraform validate'
                 sh 'terraform apply --auto-approve'
                 }
             }
-        }
+        
         stage ('Deploy into test-server using Ansible') {
            steps {
              ansiblePlaybook credentialsId: 'sshkey', disableHostKeyChecking: true, installation: 'ansible', inventory: '/etc/ansible/hosts', playbook: 'ansible-playbook.yml', vaultTmpPath: '' 
