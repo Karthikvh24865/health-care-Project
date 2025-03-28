@@ -1,3 +1,7 @@
+provider "aws" {
+region     = "ap-south-1" 
+}
+
 /* locals {
   region = "us-east-1"
   name   = "${terraform.workspace}-cluster"
@@ -15,6 +19,3 @@ provider "aws" {
   region = "us-east-1"
 }
 */
-provider "aws" {
-region     = "ap-south-1" 
-}
