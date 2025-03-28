@@ -15,6 +15,9 @@ resource "aws_instance" "Kubernetes-server" {
   tags = {
     Name = "Kubernetes-server"
   }
+  lifecycle {
+    prevent_destroy = true
+  }
  // provisioner "local-exec" {
 //      command = " echo ${aws_instance.Kubernetes-server.public_ip} > /etc/ansible/hosts "
 //  }
