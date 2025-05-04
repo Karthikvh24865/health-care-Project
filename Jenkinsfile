@@ -8,7 +8,7 @@ pipeline {
    stage('CheckOut') {
       steps {
         echo 'Checkout the source code from GitHub'
-        git 'https://github.com/prabhulk25/health-care-Project.git'
+        git 'https://github.com/Karthikvh24865/health-care-Project.git'
             }
     }
     
@@ -27,7 +27,7 @@ pipeline {
     
     stage('Docker Image Creation') {
       steps {
-        sh 'sudo docker build -t prabhulk/healthcare:1.0 .'
+        sh 'sudo docker build -t karthikhiremath/healthcare:1.0 .'
             }
     }
     stage('DockerLogin') {
@@ -40,7 +40,7 @@ pipeline {
   
     stage('Push Image to DockerHub') {
       steps {
-        sh 'sudo docker push prabhulk/healthcare:1.0'
+        sh 'sudo docker push karthikhiremath/healthcare:1.0'
             }
     } 
         stage ('Configure Kubernetes-server with Terraform'){
