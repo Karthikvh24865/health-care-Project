@@ -1,8 +1,8 @@
 resource "aws_instance" "Kubernetes-server" {
   ami           = "ami-00bb6a80f01f03502" 
   instance_type = "t3.medium" 
-  key_name = "Prabhu"
-  vpc_security_group_ids= ["sg-0ce7a707b375e270d"]
+  key_name = "huli"
+  vpc_security_group_ids= ["sg-0f9b64f0f5bafa7e0"]
   connection {
     type     = "ssh"
     user     = "ubuntu"
